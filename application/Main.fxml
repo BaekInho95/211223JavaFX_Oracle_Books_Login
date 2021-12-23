@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane prefHeight="460.0" prefWidth="850.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="application.MainContorller">
+   <children>
+      <VBox layoutX="36.0" layoutY="46.0" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Label text="아이디" />
+            <Label text="제목">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="저자">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="출판년도">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Label prefWidth="48.0" text="페이지수">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+      <VBox layoutX="111.0" layoutY="38.0" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <TextField fx:id="tfID">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="tfTitle">
+               <VBox.margin>
+                  <Insets top="3.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="tfAuthor">
+               <VBox.margin>
+                  <Insets top="3.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="tfYear">
+               <VBox.margin>
+                  <Insets top="3.0" />
+               </VBox.margin>
+            </TextField>
+            <TextField fx:id="tfPages">
+               <VBox.margin>
+                  <Insets top="3.0" />
+               </VBox.margin>
+            </TextField>
+         </children>
+      </VBox>
+      <TableView fx:id="tvBooks" layoutX="237.0" layoutY="12.0" prefHeight="431.0" prefWidth="597.0">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="64.0" text="아이디" />
+          <TableColumn fx:id="colTitle" prefWidth="263.0" text="제목" />
+            <TableColumn fx:id="colAuthor" prefWidth="131.0" text="저자" />
+            <TableColumn fx:id="colYear" prefWidth="69.0" text="출판년도" />
+            <TableColumn fx:id="colPages" prefWidth="69.0" text="페이지수" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnInsert" layoutX="14.0" layoutY="238.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="33.0" prefWidth="68.0" text="추가" />
+      <Button fx:id="btnUpdate" layoutX="86.0" layoutY="238.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="33.0" prefWidth="68.0" text="수정" />
+      <Button fx:id="btnDelete" layoutX="161.0" layoutY="238.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="33.0" prefWidth="68.0" text="삭제" />
+   </children>
+</AnchorPane>
